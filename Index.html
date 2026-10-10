@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WAVE Messenger</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b141a;
+      color: white;
+    }
+
+    header {
+      background: #075e54;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    header p {
+      margin-bottom: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    #messages {
+      height: 55vh;
+      overflow-y: auto;
+      background: #111b21;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      background: #005c4b;
+      padding: 12px;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      background: #00a884;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .voice-controls {
+      display: flex;
+      gap: 10px;
+      margin-top: 15px;
+      flex-wrap: wrap;
+    }
+
+    .note {
+      color: #b5c5cd;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🌊 WAVE</h1>
+    <p>Connect. Chat. Share your moments.</p>
+  </header>
+
+  <main class="container">
+
+    <h3>Your Chat</h3>
+
+    <div id="messages" aria-live="polite">
+      <div class="message">
+        Welcome to WAVE! Your conversations start here.
+      </div>
+    </div>
+
+    <div class="controls">
+      <input
+        id="messageInput"
+        type="text"
+        placeholder="Type a message..."
+        autocomplete="off"
+      >
+
+      <button id="sendButton">Send</button>
+    </div>
+
+    <div class="voice-controls">
+      <button id="recordButton">🎙️ Record Voice</button>
+      <button id="stopButton" disabled>⏹ Stop</button>
+    </div>
+
+    <p class="note">
+      WAVE is under development. Messages are currently stored
+      in this browser only. Online messaging and account features
+      will be connected in later steps.
+    </p>
+
+  </main>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
